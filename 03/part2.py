@@ -9,10 +9,7 @@ filepath = "./input.txt"
 ## functions
 def istree(landline, position):
   newpos = position % len(landline)
-  if landline[newpos] == '#':
-    return True
-  else:
-    return False
+  return landline[newpos] == '#'
 
 def runslope(land, x, y):
   land_iter=iter(land)
@@ -36,5 +33,4 @@ with open(filepath) as fp:
   for line in fp:
     land.append(line.strip())
 
-answer = runslope(land, 1, 1) * runslope(land, 3, 1) * runslope(land, 5, 1) * runslope(land, 7, 1) * runslope(land, 1, 2)
-print(answer)
+print(runslope(land, 1, 1) * runslope(land, 3, 1) * runslope(land, 5, 1) * runslope(land, 7, 1) * runslope(land, 1, 2))

@@ -9,10 +9,7 @@ filepath = "./input.txt"
 ## functions
 def istree(landline, position):
   newpos = position % len(landline)
-  if landline[newpos] == '#':
-    return True
-  else:
-    return False
+  return landline[newpos] == '#'
 
 ## MAIN
 land = []
