@@ -2,21 +2,17 @@
 # encoding: utf-8
 
 import sys
+import re
 
 ## DATA
 filepath = "./input.txt"
-# 9-10 m: mmmmnxmmmwm
 
 ## MAIN
-
 pwlist = []
 with open(filepath) as fp:
-  line = fp.readline()
-  while line:
-    wqt, wchar, wpass = line.strip().split(' ')
-    wmin, wmax = wqt.strip().split('-')
-    pwlist.append((wmin,wmax,wchar[0],wpass))
-    line = fp.readline()
+  for line in fp:
+    pos1, pos2, char, pwd = re.match(r"(\d+)-(\d+) (\w): (\w+)", line).groups()
+    pwlist.append((pos1, pos2, char, pwd))
 
 passvalid = 0
 for item in pwlist:
