@@ -20,7 +20,7 @@ def runslope(land, x, y):
   xpos = 0
   treecount = 0
   for landline in land_iter:
-    if istree(landline, xpos) == 1:
+    if istree(landline, xpos):
       treecount += 1
     xpos += x
     for skippedy in range(0, y - 1):

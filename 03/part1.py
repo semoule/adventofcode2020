@@ -24,7 +24,7 @@ with open(filepath) as fp:
 x = 0
 treecount = 0
 for landline in land:
-  if istree(landline, x) == 1:
+  if istree(landline, x):
     treecount += 1
   x += 3
 
