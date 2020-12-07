@@ -5,15 +5,14 @@ import sys
 
 ## DATA
 filepath = "./input.txt"
-# ............#....#.............
 
 ## functions
 def istree(landline, position):
   newpos = position % len(landline)
   if landline[newpos] == '#':
-    return 1
+    return True
   else:
-    return 0
+    return False
 
 ## MAIN
 land = []
