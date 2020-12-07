@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import sys
-
 ## DATA
 filepath = "./input.txt"
 
