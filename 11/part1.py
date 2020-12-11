@@ -94,4 +94,4 @@ for row in seatmapcurrent:
     if seat == '#':
       total += 1
       
-print('Occupied seat count at stabilization:', total)
+print('Occupied seat count at stabilization:', total, '!', round, 'rounds computed !')
