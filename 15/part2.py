@@ -1,19 +1,15 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import time
+start_time = time.time()
+
 ## DATA
 input = [18, 11, 9, 0, 5, 1]
 #input = [0, 3, 6]  # 436
 #maxturns = 10
 #maxturns = 2020
 maxturns = 30000000
-
-## FUNCTIONS
-def get_key(val):
-  for key, value in numbers.items():
-    if val == value[0]:
-      return key
-  return "key doesn't exist"
 
 numbers = {input[i]: (i,-1) for i in range(0, len(input))}
 lastspoken = list(numbers.items())[-1][0]
@@ -43,3 +39,4 @@ while turn < maxturns:
   turn += 1
 
 print('number said on 30000000th turn :', lastspoken)
+print('duration :', (time.time() - start_time), 'seconds')
