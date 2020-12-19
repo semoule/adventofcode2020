@@ -11,12 +11,10 @@ input = [18, 11, 9, 0, 5, 1]
 #maxturns = 2020
 maxturns = 30000000
 
+#numbers = { spoken (last_turn,beforelast_turn)}
 numbers = {input[i]: (i,-1) for i in range(0, len(input))}
 lastspoken = list(numbers.items())[-1][0]
-turn = len(input) -1
-print(turn, lastspoken, numbers)
-turn += 1
-printcounter = 0
+turn = len(input)
 
 while turn < maxturns:
   # firstime : if the lastposken number has before_last value False
@@ -30,12 +28,6 @@ while turn < maxturns:
     else:
       numbers[numbersaid] = (turn, numbers[numbersaid][0])
     lastspoken = numbersaid
-
-  if (printcounter == 1000000):
-    print('.')
-    printcounter = 0
-  printcounter += 1
-
   turn += 1
 
 print('number said on 30000000th turn :', lastspoken)
