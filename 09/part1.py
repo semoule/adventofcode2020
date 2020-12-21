@@ -21,7 +21,7 @@ with open(filepath) as fp:
     numlist.append(int(line))
 
 offset = 0
-while offset + plen + 1 < len(numlist):
+while offset + plen < len(numlist):
   testlist = numlist[offset:offset + plen]
   candidate = numlist[offset + plen]
   valid = verify(testlist, candidate)
